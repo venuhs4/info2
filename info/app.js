@@ -13,8 +13,8 @@ var path = require('path');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views')); 
+//app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -34,6 +34,6 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/country', country.list);
 
-http.createServer(app).listen(1717, function () {
-    console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(4444, function () {
+    console.log('Express server listening');
 });
